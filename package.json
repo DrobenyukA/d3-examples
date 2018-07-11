@@ -1,0 +1,26 @@
+{
+  "name": "d3-examples",
+  "version": "1.0.0",
+  "description": "D3 examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrobenyukA/d3-examples.git"
+  },
+  "keywords": [
+    "D3"
+  ],
+  "author": "Drobenyuk.a",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrobenyukA/d3-examples/issues"
+  },
+  "homepage": "https://github.com/DrobenyukA/d3-examples#readme",
+  "devDependencies": {
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  }
+}
