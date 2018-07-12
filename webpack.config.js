@@ -6,20 +6,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const DIST = 'dist'
 
 module.exports = {
-    entry: ['./src/index.js'],
+    entry: './src/index.js',
     mode: 'development',
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                styles: {
-                    name: 'styles',
-                    test: /\.css$/,
-                    chunks: 'all',
-                    enforce: true
-                }
-            }
-        },
-    },
     devtool: 'inline-source-map',
     devServer: {
         contentBase: path.resolve(__dirname, DIST),
@@ -28,15 +16,16 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name].css"
+            filename: "styles.css"
         }),
         new CleanWebpackPlugin([DIST]),
         new HtmlWebpackPlugin({
-            title: "D3 examples"
+            title: "D3 examples",
+            template: "./src/templates/index.html"
         })
     ],
     output: {
-        filename: '[name].bundle.js',
+        filename: 'common.bundle.js',
         path: path.resolve(__dirname, DIST)
     },
     module: {
